@@ -40,12 +40,13 @@ tableData.forEach(function(ufoReport) {
             var inputValue = inputElement.property("value");
 
             console.log(inputValue);
-            console.log(tableData);
+            // console.log(tableData);
 
             var filteredData = tableData.filter(dateOutput => dateOutput.datetime === inputValue);
-
+            console.log("--------------------------------------")
             console.log(filteredData);
 
+            tbody.html("");
 
             // Display filtered data 
             filteredData.forEach(function(filteredReport) {
