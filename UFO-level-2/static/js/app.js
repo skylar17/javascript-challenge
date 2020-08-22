@@ -6,28 +6,25 @@ var tableData = data;
 // --------------------------------------------------
 
 // Connect dropdown items to respective columns
-var dropDown = d3.select("#column-selection");
-
-dropDown.on("click", funX);
+var dropDown = d3.select("#column-selection").on("click", funX);
 
 function funX() {
     // Prevent the page from refreshing
     d3.event.preventDefault();
 
     // Select the input element and get the raw HTML node
-    var inputSelection = d3.select("#column-selection");
+    var inputSelection = d3.select("#column-selection").property("value");
+    // console.log(inputSelection);
 
-    // Get the value property of the input element
-    var inputColumn = inputSelection.property("value");
-    var columnSelect = d3.select("#ufo-table>table-head").text();
+    // var columnSelect = d3.select("#ufo-table>table-head").text();
 
 
-    if (inputColumn === columnSelect) {
-        result = 'positive';} 
-        else {
-            result = 'NOT positive';
-        }
-    return result;
+    // if (inputColumn === columnSelect) {
+    //     result = 'positive';} 
+    //     else {
+    //         result = 'NOT positive';
+    //     }
+    // return result;
 
     // console.log(inputColumn);
 
